@@ -1,0 +1,27 @@
+.dots {
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    top: 47px;
+    z-index: -1;
+
+    &__item {
+        display: block;
+        width: 6px;
+        height: 6px;
+    }
+
+    @media (max-width: 1200px) {
+        gap: 15px;
+        top: 39px;
+    }
+
+    @media (max-width: 575px) {
+        display: none;
+    }
+}
+
+.dots-item {
+    background-color: var(--footer-gray);
+    border-radius: 100%;
+}

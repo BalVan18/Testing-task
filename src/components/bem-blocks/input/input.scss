@@ -1,0 +1,51 @@
+.input {
+    @include trs;
+    max-width: 370px;
+    width: 100%;
+    height: 48px;
+    padding-left: 10px;
+    border: 1px solid var(--white);
+    border-radius: 3px;
+    background-color: var(--input-bg);
+    outline: none;
+    color: var(--body-bgc);
+    font-size: 18px;
+    line-height: 22px;
+
+    &::placeholder {
+        color: var(--body-bgc);
+    }
+
+    &:focus {
+        background-color: hsla(230,13%,27%,0.85);
+        border: 1px solid hsla(230,13%,27%,0.85);
+        color: var(--white);
+
+        &::placeholder {
+            color: var(--white);
+        }
+    }
+
+    @media (max-width: 1200px) {
+        max-width: 310px;
+    }
+
+    @media (max-width: 991px) {
+        max-width: 230px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    @media (max-width: 767px) {
+        max-width: 49%;
+        order: 2;
+    }
+
+    @media (max-width: 575px) {
+        max-width: 80%;
+    }
+
+    @media (max-width: 420px) {
+        max-width: 90%;
+    }
+}
