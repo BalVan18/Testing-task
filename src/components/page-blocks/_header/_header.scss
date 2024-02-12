@@ -1,5 +1,4 @@
 .header {
-	@include trs(.5);
 	position: fixed;
 	padding: 33px 0 32px;
 	top: 0;
@@ -9,6 +8,12 @@
 	background-color: var(--header-bgc);
 	z-index: 1;
 	overflow: hidden;
+	transition: height .5s, background-color .3s;
+
+	@media (max-width: 991px) {
+		height: 67px;
+		padding: 16px 0;
+	}
 
 	&__wrap {
 		@include container;
@@ -55,11 +60,7 @@
 
 	&--active {
 		background-color: hsl(240, 28%, 9%);
-	}
-
-	@media (max-width: 991px) {
-		height: 67px;
-		padding: 16px 0;
+		height: 100dvh;
 	}
 }
 
@@ -96,6 +97,7 @@
 	.header-nav-list {
 		&__item {
 			opacity: 1;
+
 			&:nth-of-type(1) {
 				transform: translateX(0);
 			}
@@ -161,7 +163,7 @@
 			&:hover,
 			&:focus-visible,
 			&:active {
-				color: var(--white);
+				color: inherit;
 			}
 		}
 	}

@@ -85,8 +85,8 @@
     }
 
     &.ss-open-below {
-        border: 1px solid hsla(230,13%,27%,0.85);
-        background-color: hsla(230,13%,27%,0.85);
+        border: 1px solid hsla(230, 13%, 27%, 0.85);
+        background-color: hsla(230, 13%, 27%, 0.85);
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
 
@@ -149,6 +149,11 @@
             margin: auto 0px auto var(--ss-spacing-s);
             color: var(--body-bgc);
             font-size: 18px;
+
+            @media (max-width: 991px) {
+                font-size: 14px;
+                line-height: 18px;
+            }
         }
 
         .ss-value {
@@ -254,7 +259,7 @@
     width: auto;
     max-height: var(--ss-content-height);
     box-sizing: border-box;
-    border: solid 1px hsla(230,13%,27%,0.85);
+    border: solid 1px hsla(230, 13%, 27%, 0.85);
     transition: transform var(--ss-animation-timing), opacity var(--ss-animation-timing);
     opacity: 0;
     transform: scaleY(0);
@@ -486,9 +491,14 @@
             cursor: pointer;
             user-select: none;
 
+            @media (max-width: 991px) {
+                padding: 5px;
+                font-size: 14px;
+                line-height: 18px;
+            }
+
             &:hover {
-                color: hsl(203,82%,59%);
-                // background-color: var(--ss-primary-color);
+                color: hsl(203, 82%, 59%);
             }
 
             &.ss-disabled {
@@ -524,7 +534,7 @@
 
 .ss-content .ss-list .ss-option.ss-highlighted,
 .ss-content .ss-list .ss-option:not(.ss-disabled).ss-selected {
-    color: hsl(203,82%,59%);
+    color: hsl(203, 82%, 59%);
 }
 
 @keyframes ss-valueIn {

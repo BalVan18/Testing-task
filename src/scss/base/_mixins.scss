@@ -32,10 +32,12 @@
 		transform: scale(#{$scaleMin});
 	}
 
-	&:hover,
-	&:focus-visible,
-	&:active {
-		transform: scale(1);
+	@media (max-width: 991px) {
+		&:hover,
+		&:focus-visible,
+		&:active {
+			transform: scale(1);
+	}
 	}
 }
 
